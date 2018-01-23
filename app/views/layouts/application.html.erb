@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ja="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>H to U</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body class='<%= controller.controller_name %>'>
+<div id="wrap">
+  
+  
+  <header id="header">
+    <div class="inner">
+      <h1 id="logo"><%= link_to "H to U", root_path %></h1>
+      <!--<p id="catchcopy">What are you thinking in the future...</p>-->
+      <ul class="header-list">
+        <li><%= link_to "H to U とは", overviews_index_path %></li>
+        <li><%= link_to "記事", posts_path %></li>
+        <li><%= link_to "イベント", events_index_path %></li>
+        <li>大学生と会う</li>
+        <li>サークル</li>
+      </ul>
+      
+    </div>
+  </header>
+
+
+
+  <div id="main">
+    <%= yield %>
+  </div>
+  
+  
+  <footer id="footer">
+    <div class="footer-inner">
+      <h1 id="Logo">H to U</h1>
+      <ul class="footer-list">
+        <li>Share...</li>
+        <li>Twitter</li>
+        <li>FB</li>
+    </div>
+  </footer>
+
+</div>
+
+
+</body>
+</html>
